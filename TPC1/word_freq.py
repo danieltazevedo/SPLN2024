@@ -32,7 +32,7 @@ for txt in cl.text():
     if "-m" in cl.opt:
         imprime(ocorr.most_common(int(cl.opt.get("-m"))))
     elif "-n" in cl.opt:
-        imprime(ocorr.items())
+        imprime(sorted(ocorr.items(), key=lambda x: x[0]))
     else:
         print("Wrong Option")     
 
